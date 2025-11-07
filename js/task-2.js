@@ -1,9 +1,10 @@
 function formatMessage(message, maxLength) {
-    if (maxLength >= message.length) {
-        return message;
-    } else { 
-        return `${message.slice(0, maxLength)}...`;
-    }
+  //  Помилка: порівняння довжини обрізаного рядка, а не оригінального
+  if (message.slice(0, maxLength).length <= maxLength) {
+    return message;
+  } else {
+    return `${message.slice(0, maxLength)}...`;
+  }
 }
 
 
